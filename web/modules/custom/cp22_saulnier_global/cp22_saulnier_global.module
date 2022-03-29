@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_help().
+ */
+function cp22_saulnier_global_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.cp22_saulnier_global':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function cp22_saulnier_global_user_login(\Drupal\user\UserInterface $account) {
+  Drupal::messenger()->addMessage('Bonjour mon cher ' . $account->getAccountName());
+}

@@ -1,0 +1,31 @@
+uuid: 641dac00-77dd-484a-9967-c0f2f07588ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser_edito_partners
+  module:
+    - views
+name: entity_browser_edito_partners
+label: 'Entity browser edito partners'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Sélectionner les entités'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  86883632-5411-4db0-99a5-9f0f7bcb6386:
+    id: view
+    uuid: 86883632-5411-4db0-99a5-9f0f7bcb6386
+    label: 'Partenaires entity browser'
+    weight: 1
+    settings:
+      submit_text: 'Sélectionner les entités'
+      auto_select: false
+      view: entity_browser_edito_partners
+      view_display: entity_browser_1

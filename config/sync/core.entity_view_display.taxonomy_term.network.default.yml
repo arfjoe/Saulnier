@@ -1,0 +1,38 @@
+uuid: 60ae4092-1c8f-4fac-9873-fe2737680e98
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.network.field_icon
+    - field.field.taxonomy_term.network.field_link
+    - taxonomy.vocabulary.network
+  module:
+    - link
+id: taxonomy_term.network.default
+targetEntityType: taxonomy_term
+bundle: network
+mode: default
+content:
+  field_icon:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  description: true
+  langcode: true

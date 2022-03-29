@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the intranet installation profile.
+ */
+
+use Drupal\user\Entity\User;
+use Drupal\language\Entity\ConfigurableLanguage;
+
+/**
+ * Implements hook_install().
+ *
+ * Performs actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function cp22_saulnier_profile_install() {
+// Disable the user pictures on nodes.
+  \Drupal::configFactory()->getEditable('system.theme.global')->set('features.node_user_picture', FALSE)->save(TRUE);
+
+  // Enable the admin theme for node edit content
+  \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+
+  // Assign user 1 the "administrator" role.
+  $user = User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
+
+  // Add FR language
+  $language = ConfigurableLanguage::createFromLangcode('fr');
+  $language->save();
+
+  // Change default language
+  \Drupal::configFactory()->getEditable('system.site')->set('default_langcode', $language->id())->save();
+
+  // Remove en language
+  $enLanguage = ConfigurableLanguage::load('en');
+  \Drupal::entityTypeManager()->getStorage('configurable_language')->delete(array($enLanguage));
+}

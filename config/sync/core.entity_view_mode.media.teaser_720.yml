@@ -1,0 +1,10 @@
+uuid: f50fda35-bdd6-4a52-9d4a-1900b6a2fedb
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.teaser_720
+label: 'Teaser 720(720x470)'
+targetEntityType: media
+cache: true

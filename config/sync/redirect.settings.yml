@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: nDZE-tcJ-l1RNYC66jD7p6I04ZD_L0xNSJi4oqHP0t4
+auto_redirect: true
+default_status_code: 301
+passthrough_querystring: true
+warning: false
+ignore_admin_path: false
+access_check: false
+route_normalizer_enabled: true
+langcode: fr

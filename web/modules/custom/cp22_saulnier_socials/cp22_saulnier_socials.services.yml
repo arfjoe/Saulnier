@@ -1,0 +1,27 @@
+services:
+
+#  Drupal\cp22_saulnier_socials\Gateway\SocialsGateway:
+#    class: Drupal\cp22_saulnier_socials\Gateway\SocialsGateway
+#    arguments: ['@entity_type.manager']
+#
+  Drupal\cp22_saulnier_socials\Manager\SocialsManager:
+    class: Drupal\cp22_saulnier_socials\Manager\SocialsManager
+    arguments: [ '@entity_type.manager', '@cp22_saulnier_global.basic_taxonomy_gateway']
+
+#  Drupal\cp22_saulnier_socials\Form\socialsListForm:
+#    class: Drupal\cp22_saulnier_socials\Form\socialsListForm
+#    arguments: ['@Drupal\cp22_saulnier_socials\Manager\ThemeTaxonomyManager']
+
+#  Drupal\cp22_saulnier_socials\Gateway\ThemeTaxonomyGateway:
+#    class: Drupal\cp22_saulnier_socials\Gateway\ThemeTaxonomyGateway
+#    arguments: [ '@entity_type.manager' ]
+#
+#  Drupal\cp22_saulnier_socials\Manager\ThemeTaxonomyManager:
+#    class: Drupal\cp22_saulnier_socials\Manager\ThemeTaxonomyManager
+#    arguments: [ '@Drupal\cp22_saulnier_socials\Gateway\ThemeTaxonomyGateway','@entity_type.manager' ]
+#
+#  Drupal\cp22_saulnier_socials\Breadcrumb\socialsBreadcrumbBuilder:
+#    class: Drupal\cp22_saulnier_socials\Breadcrumb\socialsBreadcrumbBuilder
+#    arguments: [ '@title_resolver','@request_stack','@Drupal\cp22_saulnier_socials\Manager\socialsManager' ]
+#    tags:
+#      - { name: breadcrumb_builder, priority: 1011 }

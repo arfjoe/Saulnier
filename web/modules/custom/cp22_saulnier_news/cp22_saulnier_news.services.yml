@@ -1,0 +1,26 @@
+services:
+  Drupal\cp22_saulnier_news\Gateway\NewsGateway:
+    class: Drupal\cp22_saulnier_news\Gateway\NewsGateway
+    arguments: ['@entity_type.manager','@adimeo_tools.language']
+
+  Drupal\cp22_saulnier_news\Manager\NewsManager:
+    class: Drupal\cp22_saulnier_news\Manager\NewsManager
+    arguments: [ '@Drupal\cp22_saulnier_news\Gateway\NewsGateway','@entity_type.manager']
+
+#  Drupal\cp22_saulnier_news\Form\NewsListForm:
+#    class: Drupal\cp22_saulnier_news\Form\NewsListForm
+#    arguments: ['@Drupal\cp22_saulnier_news\Manager\ThemeTaxonomyManager']
+
+  Drupal\cp22_saulnier_news\Breadcrumb\NewsBreadcrumbBuilder:
+    class: Drupal\cp22_saulnier_news\Breadcrumb\NewsBreadcrumbBuilder
+    arguments: [ '@title_resolver','@request_stack','@Drupal\cp22_saulnier_news\Manager\NewsManager' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 1011 }
+
+  Drupal\cp22_saulnier_news\Gateway\NewsHomeListGateway:
+    class: Drupal\cp22_saulnier_news\Gateway\NewsHomeListGateway
+    arguments: [ '@entity_type.manager' ]
+
+  Drupal\cp22_saulnier_news\Manager\NewsHomeListManager:
+    class: Drupal\cp22_saulnier_news\Manager\NewsHomeListManager
+    arguments: [ '@Drupal\cp22_saulnier_news\Gateway\NewsHomeListGateway','@entity_type.manager' ]

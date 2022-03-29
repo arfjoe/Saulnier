@@ -1,0 +1,120 @@
+@import "menuPrincipal";
+@import "hamburger";
+.Header {
+  height: 11rem;
+  max-width: 170rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 666;
+
+  @include tablet {
+    padding: 0 3.7rem 0 2.4rem;
+  }
+
+  @extend %_flexBetween;
+
+  &-logo {
+    max-width: 25rem;
+    img {
+      display: block;
+    }
+  }
+  &-networks {
+    @include tablet{
+      text-align: center;
+    }
+    & > div {
+      a {
+        display: inline-block;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-left: 3rem;
+        &:first-child{
+          margin-left: 0;
+        }
+        svg {
+          //max-width: 100%;
+          //max-height: 100%;
+          fill:$color-textBlue;
+          @include tablet{
+            height: 4rem;
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  &-mobileMenu {
+    @extend %_displayNone;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    //height: calc(100vh - 11rem);
+    z-index: 1;
+    overflow-y: auto;
+    padding-left: 0;
+    box-shadow: 0 3px 36px #00000040;
+  }
+
+  &-menuMain{
+    &-firstLevel{
+      justify-content: space-between;
+    }
+    &-itemList{
+      @include tablet {
+        background-color: $color-greyBackground;
+        border-bottom: 0.2rem solid white;
+      }
+      display: block;
+      padding:0;
+      margin: 0;
+    }
+    &-link{
+      width: 100%;
+      height:7rem;
+      padding-left: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-networks{
+    margin-left: 0;
+
+    @include tablet{
+      width: 100%;
+      height: 11rem;
+      background-color: $color-greyBackground;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      #block-socialslist--2{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  @include tablet {
+    &-mobileMenu{
+      display: none;
+    }
+    & > .Header-menuMain,
+    & > .Header-networks {
+      display: none;
+    }
+  }
+  &.js-mobile-menu-open {
+    @include tablet{
+      .Header-mobileMenu {
+        display: block;
+      }
+    }
+  }
+}
+

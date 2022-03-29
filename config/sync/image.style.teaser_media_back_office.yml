@@ -1,0 +1,17 @@
+uuid: c8553b33-b8a6-4a1c-b742-9e8eb621fc2c
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _g0KdssB073dKrt2H1egoBBVwuK9GmPfm0In20VuHG4
+name: teaser_media_back_office
+label: 'Teaser media Back-office (400w)'
+effects:
+  d426547d-8e46-46b3-aac0-6f70e17e38df:
+    uuid: d426547d-8e46-46b3-aac0-6f70e17e38df
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: null
+      upscale: false

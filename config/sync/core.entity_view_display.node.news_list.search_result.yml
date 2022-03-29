@@ -1,0 +1,32 @@
+uuid: 4d29ce83-0f26-40c9-a324-bfd3d688546a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.news_list.field_visual
+    - node.type.news_list
+  module:
+    - user
+id: node.news_list.search_result
+targetEntityType: node
+bundle: news_list
+mode: search_result
+content:
+  field_visual:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: colorized_cover
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  links: true

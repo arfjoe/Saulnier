@@ -1,0 +1,108 @@
+.Popin {
+  @extend %_displayNone;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 666;
+  background-color: rgba(255,255,255,0.51);
+  justify-content: center;
+  align-items: center;
+
+  &.open {
+    display: flex;
+  }
+
+  &-close {
+    @extend %_crossClose;
+  }
+
+  &-wrapper {
+    position: relative;
+    background-color: $color-black;
+    color: $color-white;
+    padding: 8rem 6.5rem 8rem;
+    width: 102.6rem;
+    max-width: 100%;
+
+    @include tablet() {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    @include mobile() {
+      padding: 3rem 2.2rem 3rem;
+    }
+  }
+
+  .MainTitle {
+    color: $color-white;
+    margin-bottom: 6.7rem;
+  }
+
+  .btn {
+    border-color: $color-white;
+    border-top-color: transparent;
+    color: $color-white;
+
+    &:hover {
+      color: $color-white;
+
+      input {
+        color: $color-white;
+      }
+    }
+
+    &-topFakeBorders {
+      &:before,
+      &:after {
+        background: $color-white;
+      }
+    }
+    &-anim {
+      &:after,
+      &:before {
+        background: $color-white;
+      }
+    }
+    input {
+      color: $color-white;
+    }
+
+  }
+
+  form {
+    & > .js-form {
+
+      &-type-textfield {
+
+        input {
+          border: 1px solid $color-white;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+%_crossClose {
+  font-size: 2.2rem;
+  color: $color-white;
+  position: absolute;
+  top: 1.8rem;
+  right: 1.6rem;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition-duration: 0.2s;
+
+  &:hover {
+    transform: rotate(360deg);
+    transition-duration: 0.7s;
+  }
+}

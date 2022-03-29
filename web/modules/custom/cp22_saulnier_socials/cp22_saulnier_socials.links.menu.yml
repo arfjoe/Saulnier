@@ -1,0 +1,25 @@
+#### Networks
+
+cp22_saulnier_global.global.network:
+  title: "Réseaux Sociaux"
+  parent: contrib
+  menu_name: contrib
+  route_name: '<nolink>'
+  weight: 3
+
+cp22_saulnier_global.global.network.edit:
+  title: "Lister les réseaux"
+  parent: cp22_saulnier_global.global.network
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/network/overview
+  weight: 0
+
+cp22_saulnier_global.global.network.add:
+  title: "Ajouter un réseau"
+  parent: cp22_saulnier_global.global.network
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/network/add
+  options:
+    query:
+      type[0]: 'edito'
+  weight: 1

@@ -1,0 +1,15 @@
+uuid: bb9d1d1f-a698-4a02-ae4b-005f8ccd0484
+langcode: fr
+status: true
+dependencies: {  }
+name: facebook_meta_image
+label: 'Facebook meta image (1200*630)'
+effects:
+  80690662-088e-466f-a0ad-ba461dcff820:
+    uuid: 80690662-088e-466f-a0ad-ba461dcff820
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 630
+      anchor: center-center

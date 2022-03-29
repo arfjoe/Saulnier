@@ -1,0 +1,54 @@
+uuid: 7e1270b9-c3ba-4644-a0b6-2ff283be9743
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.network.field_icon
+    - field.field.taxonomy_term.network.field_link
+    - taxonomy.vocabulary.network
+  module:
+    - icon_selector
+    - link
+id: taxonomy_term.network.default
+targetEntityType: taxonomy_term
+bundle: network
+mode: default
+content:
+  field_icon:
+    type: icon_selector_widget
+    weight: 2
+    region: content
+    settings:
+      dir: icon-social
+      value_pattern: path
+      open: 0
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

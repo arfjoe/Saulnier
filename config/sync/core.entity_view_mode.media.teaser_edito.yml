@@ -1,0 +1,10 @@
+uuid: 8029365a-74be-43bc-96a1-f5035b2f0beb
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.teaser_edito
+label: 'Teaser Edito (720x327)'
+targetEntityType: media
+cache: true

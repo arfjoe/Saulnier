@@ -1,0 +1,26 @@
+uuid: fa191307-c98e-479f-9061-62f3a9f0c51e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news_list.field_visual
+    - node.type.news_list
+  module:
+    - user
+id: node.news_list.teaser
+targetEntityType: node
+bundle: news_list
+mode: teaser
+content:
+  field_visual:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true

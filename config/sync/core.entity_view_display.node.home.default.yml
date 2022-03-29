@@ -1,0 +1,78 @@
+uuid: f9e6fbe8-e81d-4911-8c99-dbd4259e1250
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.home.field_button
+    - field.field.node.home.field_chapo
+    - field.field.node.home.field_intro
+    - field.field.node.home.field_news
+    - field.field.node.home.field_projects
+    - field.field.node.home.field_visual
+    - node.type.home
+  module:
+    - block_field
+    - entity_reference_revisions
+    - link
+    - user
+_core:
+  default_config_hash: lsaj9qVvaKVEeV-ppDsifJ_FIuNuY4bgxxFyuuK2JL4
+id: node.home.default
+targetEntityType: node
+bundle: home
+mode: default
+content:
+  field_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_chapo:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_intro:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_news:
+    type: block_field
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_projects:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: responsive_fullpage
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true

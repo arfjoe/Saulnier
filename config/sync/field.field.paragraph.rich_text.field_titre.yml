@@ -1,0 +1,19 @@
+uuid: 69a5385c-057c-41f2-a9df-dd077a6b8985
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titre
+    - paragraphs.paragraphs_type.rich_text
+id: paragraph.rich_text.field_titre
+field_name: field_titre
+entity_type: paragraph
+bundle: rich_text
+label: Titre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

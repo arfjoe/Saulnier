@@ -1,0 +1,21 @@
+uuid: 352df7d8-2524-4491-ba93-a81b55da22fc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teaser_720
+    - image.style.teaser_720_x2
+id: teaser_720
+label: 'Teaser 720'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width:450px) 720px, 344px.'
+      sizes_image_styles:
+        - teaser_720
+        - teaser_720_x2
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: teaser_720

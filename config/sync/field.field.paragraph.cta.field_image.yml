@@ -1,0 +1,29 @@
+uuid: 1c2bde77-3b37-4b04-8535-471535f44ae5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.cta
+id: paragraph.cta.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: cta
+label: Visuel
+description: 'Taille recommandé de 1440x940'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

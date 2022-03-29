@@ -1,0 +1,19 @@
+uuid: 642fec82-34d3-427e-a8ca-a3dbc02023ec
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_name
+    - taxonomy.vocabulary.theme
+id: taxonomy_term.theme.field_name
+field_name: field_name
+entity_type: taxonomy_term
+bundle: theme
+label: Nom
+description: 'Nom du terme de Taxonomie'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

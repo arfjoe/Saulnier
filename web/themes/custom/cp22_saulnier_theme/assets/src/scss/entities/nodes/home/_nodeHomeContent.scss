@@ -1,0 +1,131 @@
+.NodeHome{
+
+  //Block de la liste et des projets
+  &-mainWrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    @include tablet{
+      flex-direction: column;
+    }
+  }
+
+  //Block de liste de news
+  &-newsList{
+    background: $color-backNewsList 0 0 no-repeat padding-box;
+    padding: 5rem 3rem 7rem 7rem;
+    width: calc(50% - 1.6rem);
+    max-width: 95.2rem;
+    max-height: 85rem;
+    margin: -60rem 0 6rem;
+    color: white;
+    position: sticky;
+    top: 10rem;
+    @include more-than(1440px){
+      margin: -50rem 0 6rem;
+    }
+    @include more-than(1600px){
+      margin: -40rem 0 6rem;
+    }
+    @include tablet {
+      margin: 0 auto;
+      width: 80%;
+      position: initial;
+      max-height: none;
+    }
+    @include mobile {
+      max-width: 34.2rem;
+      padding: 3rem 1rem 3rem 3rem;
+    }
+    h2{
+      color: white;
+      text-align: left;
+    }
+    .btn--red{
+      @extend %_buttonRed;
+    }
+    //Affichage des news en mode teaser homepage
+    .NodeNewsTeaserHome{
+      @extend %_flexBetween;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      margin-bottom: 2rem;
+
+      &-textContentWrapper{
+        padding-right: 1.5rem;
+        max-width: 70%;
+      }
+      &-themes{
+        color: $color-blueSky;
+        text-transform: uppercase;
+      }
+      &-title{
+        margin: 1rem 0;
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 1.2;
+        color: $color-white;
+      }
+      &-image{
+        @include mobile{
+          width: 12rem;
+        }
+      }
+    }
+  }
+
+  //Block des projets
+  .ProjectsOnly{
+    justify-content: center;
+  }
+  &-projects{
+    margin-left: 10rem;
+    max-width: 120rem;
+    @include tablet{
+      margin-left: 0;
+    }
+    //Affichage des projets
+    .ParagraphSeeToo-nodes{
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      .NodeEditoTeaser{
+        margin-bottom: 6rem;
+        width: 80%;
+        @include tablet{
+          max-width: 50.3rem;
+        }
+        @include mobile{
+          max-width: 30.3rem;
+        }
+        &-title {
+          text-align: left;
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+  //Affichage des projets si la liste de news est vide
+  &-projectsOnly{
+    .ParagraphSeeToo{
+      &-title{
+        text-align: center;
+        margin:0 0 2rem 0;
+      }
+      @include tablet {
+        text-align: center;
+        margin: 2.5rem auto;
+      }
+      &-nodes{
+        flex-wrap: nowrap;
+        .NodeEditoTeaser {
+          width: initial;
+
+          &-title {
+            text-align: left;
+            margin-left: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

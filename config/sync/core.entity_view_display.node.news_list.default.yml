@@ -1,0 +1,27 @@
+uuid: b1c95eb2-46f0-4fc3-8d6f-1df81155a629
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.news_list.field_visual
+    - node.type.news_list
+  module:
+    - user
+id: node.news_list.default
+targetEntityType: node
+bundle: news_list
+mode: default
+content:
+  field_visual:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: colorized_cover
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

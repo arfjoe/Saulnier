@@ -1,0 +1,26 @@
+<article class="NodeSearchResult" style="margin:3rem;padding:2rem;background-color: pink">
+
+  <div class="NodeSearchResult-title title">
+      <h1 style="text-align: center">{{ label }}</h1>
+  </div>
+{#    <div class="NodeSearchResult-date">#}
+{#      {{ "publié le : "|t }}{{ node.getCreatedTime()|format_date('custom', 'j F Y') }}#}
+{#    </div>#}
+
+  <div class="NodeSearchResult-themes">
+    <h1>{{ themes }}</h1>
+  </div>
+
+  <div class="NodeSearchResult-chapo chapo">
+    {{ chapo }}
+  </div>
+
+  <div class="NodeSearchResult-excerpt">
+    {{ excerpt }}
+  </div>
+
+  <div class="NodeSearchResult-url">
+    <a href="{{ url }}">{{ label }}</a>
+  </div>
+
+</article>

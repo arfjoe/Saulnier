@@ -1,0 +1,15 @@
+uuid: 32f707b2-2a10-4d29-a8f3-c6459f22980f
+langcode: fr
+status: true
+dependencies: {  }
+name: teaser_720
+label: 'Teaser 720(720x470)'
+effects:
+  753d3e0e-40ff-467a-9d08-15461720ba73:
+    uuid: 753d3e0e-40ff-467a-9d08-15461720ba73
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 470
+      anchor: center-center

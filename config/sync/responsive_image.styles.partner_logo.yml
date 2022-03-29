@@ -1,0 +1,29 @@
+uuid: 84fdaeaf-869b-469d-b761-1fb477f711c3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.partner_logo_x1
+    - image.style.partner_logo_x2
+  theme:
+    - cp22_saulnier_theme
+id: partner_logo
+label: 'Logo partenaire'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: partner_logo_x2
+    breakpoint_id: cp22_saulnier_theme.all
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: partner_logo_x1
+    breakpoint_id: cp22_saulnier_theme.all
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: partner_logo_x2
+    breakpoint_id: cp22_saulnier_theme.all
+    multiplier: 2x
+breakpoint_group: cp22_saulnier_theme
+fallback_image_style: partner_logo_x1

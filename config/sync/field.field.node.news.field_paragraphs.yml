@@ -1,0 +1,46 @@
+uuid: 538edfb4-a838-4d87-afb8-d610537bfa75
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.news
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.rich_text
+    - paragraphs.paragraphs_type.see_too
+  module:
+    - entity_reference_revisions
+id: node.news.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: news
+label: Contenu
+description: 'Paragraphe du contenu'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cta: cta
+      media: media
+      rich_text: rich_text
+      see_too: see_too
+    negate: 0
+    target_bundles_drag_drop:
+      cta:
+        weight: 5
+        enabled: true
+      media:
+        weight: 6
+        enabled: true
+      rich_text:
+        weight: 7
+        enabled: true
+      see_too:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

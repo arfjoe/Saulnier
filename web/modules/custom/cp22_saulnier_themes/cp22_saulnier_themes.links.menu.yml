@@ -1,0 +1,25 @@
+#### Thématiques
+
+cp22_saulnier_global.global.theme:
+  title: "Thématiques"
+  parent: contrib
+  menu_name: contrib
+  route_name: '<nolink>'
+  weight: 2
+
+cp22_saulnier_global.global.theme.edit:
+  title: "Lister les thématiques"
+  parent: cp22_saulnier_global.global.theme
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/theme/overview
+  weight: 0
+
+cp22_saulnier_global.global.theme.add:
+  title: "Ajouter une thématique"
+  parent: cp22_saulnier_global.global.theme
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/theme/add
+  options:
+    query:
+      type[0]: 'edito'
+  weight: 1

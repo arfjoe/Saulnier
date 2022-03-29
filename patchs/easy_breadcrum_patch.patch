@@ -1,0 +1,12 @@
+diff --git a/easy_breadcrumb.module b/easy_breadcrumb.module
+index 3e66724..e2a727f 100644
+--- a/easy_breadcrumb.module
++++ b/easy_breadcrumb.module
+@@ -7,6 +7,7 @@
+ 
+ use Drupal\Core\Block\BlockPluginInterface;
+ 
++// Ceci est la version patchée !
+ /**
+  * Implements hook_help().
+  */

@@ -1,0 +1,25 @@
+uuid: d420d6ec-1b66-4fe5-b4f1-338567aa5b0c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news
+    - node.type.home
+  module:
+    - block_field
+id: node.home.field_news
+field_name: field_news
+entity_type: node
+bundle: home
+label: 'Liste des Actualités'
+description: '<strong>Actualités promu en page d''accueil. Au nombre de 4 maximum dans la Liste des Actualités :  "Actualités" </strong>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      cp22_saulnier_news_newshomelist: cp22_saulnier_news_newshomelist
+field_type: block_field

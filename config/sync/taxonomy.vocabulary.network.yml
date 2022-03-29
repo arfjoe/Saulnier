@@ -1,0 +1,8 @@
+uuid: f103f8a7-1830-4c52-8ca6-2846ead5a6a4
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Réseau social'
+vid: network
+description: ''
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 16b212d7-eb95-4930-ab54-2ae0f4f67ae5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partners
+    - node.type.edito_project
+    - taxonomy.vocabulary.partners
+id: node.edito_project.field_partners
+field_name: field_partners
+entity_type: node
+bundle: edito_project
+label: Partenaires
+description: 'reference partenaire sur les pages edito'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      partners: partners
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

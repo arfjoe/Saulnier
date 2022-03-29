@@ -1,0 +1,59 @@
+.ParagraphSeeToo{
+
+  margin-top: 12.8rem;
+
+  &-title{
+    text-align: left;
+    margin: 0 0 4rem 0;
+    font-size: 4rem;
+    @include tablet{
+      text-align: center;
+    }
+    @include mobile{
+      margin-left: 0;
+    }
+  }
+
+  &-nodes{
+    display: flex;
+    justify-content: center;
+    padding: 0 2.5rem;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    .NodeEditoTeaser{
+      width: calc(50% - 5rem);
+      max-width: 72rem;
+      margin: 0 2.5rem 6rem;
+      background-color: white;
+      box-shadow: 0 3px 36px #00000040;
+      padding-bottom: 4.3rem;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+
+      h2{
+        margin: 4.1rem 0 2rem;
+        text-align: center;
+        text-transform: none;
+        font-size: 2.4rem;
+        line-height: 1.2;
+        @include mobile{
+          text-align: left;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

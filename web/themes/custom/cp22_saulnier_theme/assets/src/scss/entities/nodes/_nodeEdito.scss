@@ -1,0 +1,12 @@
+.NodeEditoTeaser{
+  &-link{
+    @extend %_buttonWhite;
+  }
+  h2{
+    text-align: left;
+    @include tablet{
+      text-align: center;
+      margin: 2.5rem auto ;
+    }
+  }
+}

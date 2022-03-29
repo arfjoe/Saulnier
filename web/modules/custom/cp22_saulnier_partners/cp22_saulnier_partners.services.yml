@@ -1,0 +1,8 @@
+services:
+  Drupal\cp22_saulnier_partners\Gateway\PartnersGateway:
+    class: Drupal\cp22_saulnier_partners\Gateway\PartnersGateway
+    arguments: ['@entity_type.manager']
+
+  Drupal\cp22_saulnier_partners\Manager\PartnersManager:
+    class: Drupal\cp22_saulnier_partners\Manager\PartnersManager
+    arguments: [ '@entity_type.manager','@cp22_saulnier_global.basic_taxonomy_gateway' ]

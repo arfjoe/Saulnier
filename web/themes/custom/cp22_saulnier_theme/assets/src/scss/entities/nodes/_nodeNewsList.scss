@@ -1,0 +1,124 @@
+.news-list-form{
+  background: rgba(145, 188, 255, 0.36) 0 0 no-repeat padding-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin: -4rem auto 6.2rem;
+
+  @include mobile{
+    padding-top: 2rem;
+    flex-direction: column;
+  }
+
+  .form-item-theme,.form-item-sort-date{
+    display: flex;
+    justify-content: center;
+    label{
+      margin-right:2rem;
+      color: $color-textBlue;
+      font: normal normal bold 22px/27px Fira Sans;
+      height: 27px;
+    }
+    select{
+      background: rgba(145, 188, 255, 0) 0 0 no-repeat padding-box;
+      border: none;
+      border-bottom: solid 1px $color-textBlue;
+      color: $color-textBlue;
+      font: normal normal normal 18px/22px Fira Sans;
+      height: 22px;
+      margin-top: 0.2rem;
+    }
+  }
+  input{
+    width: 10%;
+    display: none;
+  }
+}
+
+.NodeNewsList{
+
+  &-listWrapper a{
+
+    display: flex;
+    justify-content: space-around;
+    @include tablet{
+      padding:0 8rem;
+      flex-direction: column;
+    }
+  }
+
+  .NodeNewsTeaser{
+    max-width: 132rem;
+    margin: 0 14rem 8rem;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 50%;
+    padding: 0 3rem 8rem 9rem;
+
+    &-block{
+      background-color: white;
+      box-shadow: 0 3px 36px #00000040;
+      padding: 4rem 4.5rem 2.7rem;
+      max-width: 80%;
+      width: 71rem;
+      height: 23rem;
+      position: absolute;
+      left: 3rem;
+      bottom: 0;
+
+      @include screenMaxWidth(1720px){
+        max-width: 90%;
+        height: auto;
+        padding: 3rem 2.5rem;
+      }
+
+      @include tablet{
+        max-width: 95%;
+        width: 72rem;
+        height: auto;
+        padding: 2.7rem 2rem;
+      }
+
+      @include newsListWidth{
+        max-width: 95%;
+        height: auto;
+        padding: 2rem 1.6rem;
+      }
+
+      @include mobile{
+        max-width: 120%;
+      }
+    }
+
+    &-image{
+      max-width: 72rem;
+      img{
+        max-width: 100%;
+        height: auto;
+
+        @include screenMaxWidth(1720px){
+          max-width: none;
+          width: 50rem;
+        }
+
+        @include tablet{
+          max-width: none;
+          width: 40rem;
+        }
+        @include newsListWidth{
+          max-width: none;
+          width: 30rem;
+        }
+      }
+    }
+
+    &-date{
+      font-size: 1.8rem;
+      color: $color-blueSky;
+      margin-bottom: 2rem;
+    }
+  }
+}

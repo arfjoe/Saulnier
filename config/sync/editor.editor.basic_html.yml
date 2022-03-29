@@ -1,0 +1,70 @@
+uuid: 2af22b49-4ceb-40d8-80e9-465d6e5401ab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: txt
+_core:
+  default_config_hash: 0PTy9y9C93_PZTbfty_AWP4HzGnJfxfV5orQJxevUwE
+format: basic_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Underline
+            - Italic
+            - Strike
+            - '-'
+            - RemoveFormat
+        -
+          name: Linking
+          items:
+            - TokenLink
+            - DrupalUnlink
+            - DrupalFile
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: 'Block Formatting'
+          items:
+            - Styles
+        -
+          name: Tools
+          items:
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - '-'
+            - Undo
+            - Redo
+            - Source
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

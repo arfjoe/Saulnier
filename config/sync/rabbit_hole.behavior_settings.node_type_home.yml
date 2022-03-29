@@ -1,0 +1,16 @@
+uuid: b15cec56-664c-4d73-b894-f50c6d77582b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.home
+_core:
+  default_config_hash: qCrLLkEtzGPEqX4hgQXOqsAXs0Qjc3PggoeEQFSpAbw
+id: node_type_home
+entity_type_id: node_type
+entity_id: home
+action: page_redirect
+allow_override: 0
+redirect: /
+redirect_code: 301
+redirect_fallback_action: access_denied

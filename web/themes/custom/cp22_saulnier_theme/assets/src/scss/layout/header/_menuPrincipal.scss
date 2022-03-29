@@ -1,0 +1,120 @@
+.Header-menuMain {
+  flex-grow: 1;
+  padding:0 3rem 0 9rem;
+  height: 100%;
+
+  @include tablet {
+    height: auto;
+    padding: 0;
+  }
+
+  & > nav {
+    height: 100%;
+    @include tablet {
+      height: auto;
+    }
+  }
+
+  &-link {
+    color: $color-textBlue;
+    font-size: 2rem;
+    @extend %_fontBodyBold;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include screenMaxWidth(1470px) {
+      font-size: 1.8rem;
+    }
+    @include screenMaxWidth(1300px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &-itemList {
+    position: relative;
+    margin-right: 6rem;
+
+    @include screenMaxWidth(1600px) {
+      margin-right: 4rem;
+    }
+    @include screenMaxWidth(1470px) {
+      margin-right: 2rem;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include tablet {
+      padding: 2rem;
+    }
+  }
+
+  &-firstLevel {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include tablet {
+      display: block;
+    }
+
+    & > .Header-menuMain-itemList {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      &.has-children > .Header-menuMain-link:after {
+        content: '\f149';
+        display: none;
+        @extend %_fontAwesomeBase;
+        font-size: 1.6rem;
+        margin-left: 1.4rem;
+      }
+
+      @include tablet {
+        display: block;
+
+        &.has-children > .Header-menuMain-link:after {
+          display: inline-block;
+        }
+      }
+
+      &.js-open{
+        .Header-menuMain-secondLevel {
+          display: block;
+        }
+      }
+    }
+  }
+  &-secondLevel {
+    @extend %_displayNone;
+    position: absolute;
+    top: 100%;
+    width: 26rem;
+    background-color: $color-greyBackground;
+    padding: 3rem 0;
+
+    @include tablet {
+      position: static;
+      width: 100%;
+      padding: 1.5rem 3rem;
+    }
+
+    .Header-menuMain-itemList {
+      @include tablet {
+        padding: 0;
+      }
+    }
+
+    .Header-menuMain-link {
+      display: block;
+      padding: 1.5rem 2rem;
+      font-size: 1.8rem;
+      text-transform: none;
+    }
+    @include tablet {
+      padding: 1rem 0;
+    }
+  }
+}

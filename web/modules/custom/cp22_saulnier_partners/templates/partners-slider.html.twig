@@ -1,0 +1,15 @@
+<div class="PartnersSlider swiper">
+
+  <div class="PartnersSlider-slidesWrapper swiper-wrapper">
+
+    {% for partner in partners|children %}
+      <div class="PartnersSlider-slide swiper-slide">
+        {{ partner }}
+      </div>
+    {% endfor %}
+
+  </div>
+
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>

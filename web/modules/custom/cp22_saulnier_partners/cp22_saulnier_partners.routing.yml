@@ -1,0 +1,7 @@
+cp22_saulnier_partners:
+  path: '/partenaires'
+  defaults:
+    _controller: '\Drupal\cp22_saulnier_partners\Controller\PartnersController::getContent'
+    _title: 'Liste des partenaires'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,14 @@
+uuid: e9b6ddf6-0351-4cbc-8f83-d9810322dcbd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.news_list
+id: node_type_news_list
+entity_type_id: node_type
+entity_id: news_list
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: ca3M_tYgkyzPCo66hrCPOBC4cEUJxTOKHVE8sAT_4co
+langcode: fr
+threshold:
+  requirements_warning: 0
+  requirements_error: 0

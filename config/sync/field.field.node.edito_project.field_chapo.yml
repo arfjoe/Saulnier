@@ -1,0 +1,19 @@
+uuid: 8930c22c-5062-4803-ae36-925335899fda
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chapo
+    - node.type.edito_project
+id: node.edito_project.field_chapo
+field_name: field_chapo
+entity_type: node
+bundle: edito_project
+label: Chapô
+description: 'Introduction de la page (repris dans une autre page)'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,25 @@
+#### Partners
+
+cp22_saulnier_global.global.partners:
+  title: "Partenaires"
+  parent: contrib
+  menu_name: contrib
+  route_name: '<nolink>'
+  weight: 4
+
+cp22_saulnier_global.global.partners.edit:
+  title: "Lister les partenaires"
+  parent: cp22_saulnier_global.global.partners
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/partners/overview
+  weight: 0
+
+cp22_saulnier_global.global.partners.add:
+  title: "Ajouter un partenaire"
+  parent: cp22_saulnier_global.global.partners
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy/manage/partners/add
+  options:
+    query:
+      type[0]: 'edito'
+  weight: 1

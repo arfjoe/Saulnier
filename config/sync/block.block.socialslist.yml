@@ -1,0 +1,20 @@
+uuid: e06487b7-d3c4-4dcb-931c-8c0377140737
+langcode: fr
+status: true
+dependencies:
+  module:
+    - cp22_saulnier_socials
+  theme:
+    - cp22_saulnier_theme
+id: socialslist
+theme: cp22_saulnier_theme
+region: header
+weight: 0
+provider: null
+plugin: cp22_saulnier_socials_socialslist
+settings:
+  id: cp22_saulnier_socials_socialslist
+  label: SocialsList
+  label_display: '0'
+  provider: cp22_saulnier_socials
+visibility: {  }

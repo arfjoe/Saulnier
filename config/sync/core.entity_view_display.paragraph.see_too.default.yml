@@ -1,0 +1,31 @@
+uuid: 403fad62-9163-4510-bb69-22e84a459003
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.see_too.field_nodes
+    - field.field.paragraph.see_too.field_title
+    - paragraphs.paragraphs_type.see_too
+id: paragraph.see_too.default
+targetEntityType: paragraph
+bundle: see_too
+mode: default
+content:
+  field_nodes:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

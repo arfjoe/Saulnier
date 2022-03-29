@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  /* Utilisons un peu d'inertie sur IOS */
+  -webkit-overflow-scrolling: touch;
+  word-break: break-word;
+}
+
+html {
+  font-size: 62.5%;
+  //font-size: .625em;
+  //font-size: calc(1em * .625);
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+#Page {
+  color: $color-black;
+  @extend %_fontBody;
+  font-size: 1.6rem;
+}
+
+:focus {
+  outline: transparent;
+}
+
+.element-invisible,
+.hidden,
+.visually-hidden{
+  display: none;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,li {
+  list-style: none;
+  list-style-type: none;
+}
+
+h1{
+  font-family: "Fira Sans",sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5rem;
+  line-height: 1.2;
+  color:$color-textBlue;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+h2{
+  text-transform: uppercase;
+  color:$color-textBlue;
+  font: normal normal bold 40px/48px Fira Sans;
+  width: 100%;
+  text-align: center;
+}
+h3{
+
+  color:$color-textBlue;
+  font: normal normal bold 30px/36px Fira Sans;
+}
+
+.clear{
+  clear: both;
+}
+//em {
+//  @extend %_fontBodyItalic;
+//}
+
+strong {
+  @extend %_fontBodyBold;
+}
+
+.site-size-wrapper {
+  @extend %_siteSizeWrapper;
+
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+
+  &--noPaddings {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--noResponsivePaddings {
+    @include tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--noMobilePaddings {
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+.background{
+  @extend %_decoDots;
+}
+
+.relative{
+  position: relative;
+}

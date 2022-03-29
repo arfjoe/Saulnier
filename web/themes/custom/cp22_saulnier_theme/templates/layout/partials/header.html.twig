@@ -1,0 +1,35 @@
+<header id="Header" class="Header">
+
+  <article class="Header-logo">
+    <a href="{{ front_page }}" title="{{ "Retour à la page d'accueil"|t }}"><img src="{{ logo_url }}" alt="logo"/></a>
+  </article>
+
+  <article class="Header-menuMain">
+    {{ header.main_menu }}
+  </article>
+
+  <article class="Header-networks">
+    {{ header.socialslist}}
+  </article>
+  <div>{{ header.selecteurdelangue }}</div>
+  <div>{{ header.search_input}}</div>
+
+  <section class="Header-mobil">
+    <div class="Header-hamburger">
+      <i class="far fa-bars"></i>
+      <i class="far fa-times"></i>
+    </div>
+
+    <article class="Header-mobileMenu">
+      <div class="Header-menuMain">
+        {{ header.main_menu }}
+      </div>
+      <div class="Header-networks">
+        {{ header.socialslist}}
+      </div>
+    </article>
+  </section>
+
+
+</header>
+

@@ -1,0 +1,20 @@
+uuid: 7eea4c2c-0df6-4375-aa72-e162f293b573
+langcode: fr
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: dqGmzAWliAiClkxyj7u9guDXrTk_-LCrzwhOYb3yQ9I
+id: user.user.metatag
+field_name: metatag
+entity_type: user
+bundle: user
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

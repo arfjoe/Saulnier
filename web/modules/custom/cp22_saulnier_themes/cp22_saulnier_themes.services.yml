@@ -1,0 +1,18 @@
+services:
+
+#  Drupal\cp22_saulnier_themes\Form\themesListForm:
+#    class: Drupal\cp22_saulnier_themes\Form\themesListForm
+#    arguments: ['@Drupal\cp22_saulnier_themes\Manager\ThemeTaxonomyManager']
+
+#  Drupal\cp22_saulnier_themes\Gateway\ThemeTaxonomyGateway:
+#    class: Drupal\cp22_saulnier_themes\Gateway\ThemeTaxonomyGateway
+#    arguments: [ '@entity_type.manager' ]
+#
+#  Drupal\cp22_saulnier_themes\Manager\ThemeTaxonomyManager:
+#    class: Drupal\cp22_saulnier_themes\Manager\ThemeTaxonomyManager
+#    arguments: [ '@Drupal\cp22_saulnier_themes\Gateway\ThemeTaxonomyGateway','@entity_type.manager' ]
+
+  Drupal\cp22_saulnier_themes\Manager\ThemeTaxonomyManager:
+    class: Drupal\cp22_saulnier_themes\Manager\ThemeTaxonomyManager
+    arguments: [ '@entity_type.manager','@cp22_saulnier_global.basic_taxonomy_gateway']
+

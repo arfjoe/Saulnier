@@ -1,0 +1,115 @@
+<?php
+
+use Drupal\adimeo_tools\Service\LanguageService;
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * @param $attachments
+ */
+function cp22_saulnier_theme_page_attachments_alter(array &$attachments) {
+  $languageService = LanguageService::me();
+
+  // Add current theme in drupalSettings data
+  $currentTheme = \Drupal::theme()->getActiveTheme();
+  $attachments['#attached']['drupalSettings']['theme'] = [
+    'path' => $currentTheme->getPath(),
+    'name' => $currentTheme->getName(),
+  ];
+
+  // Add current lang in drupalSettings data
+  $attachments['#attached']['drupalSettings']['langCode'] = $languageService->getCurrentLanguageId();
+}
+
+
+/**
+ * On redefinie l'ordre des suggestions par view_mode et pas par type.
+ * @param $suggestions
+ * @param $vars
+ */
+function cp22_saulnier_theme_suggestions_alter(&$suggestions, $vars, $type) {
+  _cp22_saulnier_theme_get_sorted_suggestions($suggestions, $vars);
+}
+
+/**
+ * Trie les suggestions par view_mode
+ * Par défaut Drupal prend les suggestion dans cet ordre :
+ * - node-type-view-mode
+ * - node-type
+ * - node-view-mode
+ * - node
+ *
+ * Ici on redéfini dans cet ordre :
+ * - node-type-view-mode
+ * - node-view-mode
+ * - node-type
+ * - node
+ */
+function _cp22_saulnier_theme_get_sorted_suggestions(&$suggestions, $vars) {
+
+  if (array_key_exists('elements', $vars) && array_key_exists('#view_mode', $vars['elements'])) {
+    $viewMode = $vars['elements']['#view_mode'];
+
+    // Pour réordonner les suggestions en fonction du viewmode,
+    // on est obligé de spliter la liste en deux index qu'on va reconcatène
+    $newSuggestions = [];
+    foreach ($suggestions as $suggestion) {
+      if (strpos($suggestion, $viewMode) !== FALSE) {
+        $newSuggestions[0][] = $suggestion;
+      }
+      else {
+        $newSuggestions[1][] = $suggestion;
+      }
+    }
+
+    // Si on a des suggestions avec view_mode et sans view mode, on concatène
+    // les deux sous tableaux.
+    if (array_key_exists(0, $newSuggestions) && array_key_exists(1, $newSuggestions)) {
+      $newSuggestions = array_merge($newSuggestions[1], $newSuggestions[0]);
+    }
+    // Si on n'a que des suggestions avec view_mode, on ne prend en compte que celui-ci
+    elseif (array_key_exists(0, $newSuggestions)) {
+      $newSuggestions = $newSuggestions[0];
+    }
+    // Si on n'a que des suggestions sans view_mode, on ne prend en compte que celui-ci
+    elseif (array_key_exists(1, $newSuggestions)) {
+      $newSuggestions = $newSuggestions[1];
+    }
+
+    // ON réassocie des index indentique au paramètre en entrée.
+    foreach ($newSuggestions as $key => $suggestion) {
+      $suggestions[$key] = $suggestion;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_page
+ */
+function cp22_saulnier_theme_preprocess_page(&$variables) {
+  //INSERT THEME LOGO URL INSIDE PAGE TEMPLATE
+  $logoUrl = theme_get_setting('logo.url');
+  $variables['logo_url'] = $logoUrl;
+}
+
+function cp22_saulnier_theme_preprocess_node(&$variables) {
+  $node = $variables['node'];
+
+  if ($node->bundle() == 'news' && $variables['view_mode'] == 'teaser_homepage') {
+    /** @var \Drupal\Core\Datetime\DateFormatterInterface $formatter */
+    $date_formatter = \Drupal::service('date.formatter');
+
+    $creationTime = $node->getCreatedTime();
+    $variables['created_since'] = $date_formatter->formatTimeDiffSince($creationTime,['granularity' => 1]);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for taxonomies.
+ *
+ * {@inheritdoc}
+ */function cp22_saulnier_theme_theme_suggestions_taxonomy_term_alter(&$suggestions, $vars, $hook) {
+  $suggestions[] = 'taxonomy_term__' . $vars['elements']['#view_mode'];
+  $vid = $vars['elements']['#taxonomy_term']->bundle();
+  $suggestions[] = 'taxonomy_term__' . $vid . '__' . $vars['elements']['#view_mode'];
+}

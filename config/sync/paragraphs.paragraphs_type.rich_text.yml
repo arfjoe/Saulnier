@@ -1,0 +1,15 @@
+uuid: 1065f9ea-1d0d-4753-aa4f-9bae72a06800
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_rich_text.png
+id: rich_text
+label: 'Texte riche'
+icon_uuid: null
+icon_default: null
+description: 'Copie de texte avec possibilté d''appliquer ses propres modifications'
+behavior_plugins: {  }

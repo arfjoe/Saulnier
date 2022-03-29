@@ -1,0 +1,4 @@
+name: Theme
+widget:
+  config:
+    reset_text: 'All display'

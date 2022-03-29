@@ -1,0 +1,10 @@
+@import "base/base";
+@import "helpers/helpers";
+
+// add required theming elements according to ckeditor settings and available styles
+//@import "themes/buttons";
+
+body {
+  // See in helpers/placeholder/_ckeditor :
+  @extend %_ckeditor;
+}

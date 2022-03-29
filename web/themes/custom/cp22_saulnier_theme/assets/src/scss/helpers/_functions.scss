@@ -1,0 +1,12 @@
+// LINE HEIGHT FROM PHOTOSHOP VALUE (PSD Line-height, PSD font-size in px)
+@function lineHeight($psd-line-height, $font-size) {
+  @return $psd-line-height / $font-size;
+}
+
+//GET Font size fluid value from graphic mockup font size ref
+@function fluidFontSizer($viewportRef, $fontSizeRef) {
+  @return ($fontSizeRef * 100vw) / $viewportRef;
+}
+
+
+// project specifics mixins :

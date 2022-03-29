@@ -1,0 +1,78 @@
+uuid: 3071f6c0-4273-42a0-8ad7-6b644a8eff1f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_chapo
+    - field.field.node.news.field_metatags
+    - field.field.node.news.field_paragraphs
+    - field.field.node.news.field_start_date
+    - field.field.node.news.field_theme
+    - field.field.node.news.field_visual
+    - node.type.news
+  module:
+    - cp22_saulnier_news
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  field_chapo:
+    type: saulnier_display_character_count
+    label: above
+    settings:
+      format: words
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_start_date:
+    type: saulnier_datetime_time_ago
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: colorized_cover
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

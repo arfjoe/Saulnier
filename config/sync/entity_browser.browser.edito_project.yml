@@ -1,0 +1,42 @@
+uuid: 2e12b0cc-af4f-44c4-ae3c-e7de0d567c9b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.eb_node_edito
+    - views.view.edito_project_bis
+  module:
+    - views
+name: edito_project
+label: 'Page Projet Editoriales'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Ajouter des pages projets éditoriales'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  aa4ca28e-acf2-41b5-bb18-70d419d98d67:
+    id: view
+    uuid: aa4ca28e-acf2-41b5-bb18-70d419d98d67
+    label: 'Listes des pages projets éditoriales'
+    weight: 1
+    settings:
+      submit_text: Ajouter
+      auto_select: false
+      view: eb_node_edito
+      view_display: entity_browser_1
+  bb388f5e-f616-4462-ad47-26f5d2269e35:
+    id: view
+    uuid: bb388f5e-f616-4462-ad47-26f5d2269e35
+    label: 'Pages edito'
+    weight: 2
+    settings:
+      submit_text: 'Sélectionner les entités'
+      auto_select: false
+      view: edito_project_bis
+      view_display: entity_browser_1

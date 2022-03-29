@@ -1,0 +1,61 @@
+uuid: e0b11f70-4f2a-4ec1-bfe3-8ee06d911e30
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.colorized_cover_l
+    - image.style.colorized_cover_m
+    - image.style.colorized_cover_s
+    - image.style.colorized_cover_xl
+  theme:
+    - cp22_saulnier_theme
+id: colorized_cover
+label: 'Cover Colorisée '
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_xl
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_xl
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_xl
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_xl
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_l
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_xl
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_s
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_s
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: colorized_cover_m
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 2x
+breakpoint_group: cp22_saulnier_theme
+fallback_image_style: colorized_cover_l

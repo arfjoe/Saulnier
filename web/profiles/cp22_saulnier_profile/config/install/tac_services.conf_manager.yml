@@ -1,0 +1,67 @@
+data:
+  google_map_api_tac_service:
+    data:
+      google_maps_api_key: ''
+    is_active: 0
+    library: tac_services/tac_google_maps_api
+  matomo_tac_service:
+    data:
+      site_id: ''
+      server_url: ''
+    is_active: 0
+    library: tac_services/tac_matomo
+  google_tag_manager_tac_service:
+    data:
+      google_tag_manager_key: ''
+    is_active: 0
+    library: tac_services/tac_google_tag_manager
+  google_analytics_tac_service:
+    data:
+      google_ga_key: ''
+    is_active: 0
+    library: tac_services/tac_google_ga
+  facebook_tac_services:
+    data:
+      facebook_key: ''
+    is_active: 0
+    library: tac_services/tac_facebook
+  facebook_pixel_tac_service:
+    data:
+      facebook_pixel_id: ''
+    is_active: 0
+    library: tac_services/tac_facebook_pixel
+  youtube_api_tac_service:
+    data: {  }
+    is_active: 0
+    library: tac_services/tac_youtube_api
+  twitter_timelines_tac_service:
+    data: {  }
+    is_active: 0
+    library: tac_services/tac_twitter_timelines
+  tradelab_tac_service:
+    data:
+      tradelab_id: ''
+    is_active: 0
+    library: tac_services/tac_tradelab
+  clic2drive_tac_service:
+    data: {  }
+    is_active: 0
+    library: tac_services/tac_clic2drive
+  youtube_embed_tac_service:
+    data: {  }
+    is_active: 1
+    library: tac_services/tac_youtube_embed
+  vimeo_embed_tac_service:
+    data: {  }
+    is_active: 1
+    library: tac_services/tac_vimeo_embed
+  google_gtag_tac_service:
+    data:
+      google_gtag_key: ''
+    is_active: 0
+    library: tac_services/tac_gtag
+  kissmetrics_tac_service:
+    data:
+      kissmetrics_key: ''
+    is_active: 0
+    library: tac_services/kissmetrics

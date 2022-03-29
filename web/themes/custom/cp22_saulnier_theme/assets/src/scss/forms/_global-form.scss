@@ -1,0 +1,66 @@
+form {
+  font-size: 1.6rem;
+
+  & > .js-form {
+
+    &-item {
+      position: relative;
+    }
+
+    &-type-textfield {
+      max-width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      input {
+        height: 5rem;
+        border: 1px solid $color-black;
+        padding: 0 1rem;
+
+        &:focus {
+          border-color: transparent;
+          border-bottom-color: $color-black;
+        }
+      }
+    }
+  }
+
+  input, textarea {
+    font-size: 1.6rem;
+    background: none;
+    border: solid 1px $color-black;
+    width: 100%;
+  }
+
+  label {
+
+  }
+
+  .form-item {
+    margin-bottom: 1.4rem;
+  }
+
+  input[type="radio"] {
+    //@extend %_default_input_radio;
+  }
+
+  input[type="checkbox"] {
+    //@extend %_default_input_checkbox;
+  }
+
+  .form-actions {
+  }
+
+  //ERRORS
+  .Messages-type-error {
+
+
+
+  }
+  .js-form-item.form-item--error{
+    //@extend %_errorWrapper;
+  }
+  .form-item--error-message {
+    //@extend %_errorMessage;
+  }
+}

@@ -1,0 +1,10 @@
+uuid: 69fa6ed5-e69c-44a3-a64a-a615f4cb3404
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.teaser_news_homepage
+label: 'Teaser News homepage (140x140)'
+targetEntityType: media
+cache: true

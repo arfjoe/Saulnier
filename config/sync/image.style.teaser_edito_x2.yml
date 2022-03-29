@@ -1,0 +1,15 @@
+uuid: 25ab295e-1566-4645-bfd7-eb3b9ec996ca
+langcode: fr
+status: true
+dependencies: {  }
+name: teaser_edito_x2
+label: 'Teaser Edito (1440x654)'
+effects:
+  ed665f55-bf6f-4fc8-a59e-7cafd92686af:
+    uuid: ed665f55-bf6f-4fc8-a59e-7cafd92686af
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 654
+      anchor: center-center

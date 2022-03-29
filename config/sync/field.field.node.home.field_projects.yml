@@ -1,0 +1,40 @@
+uuid: 626f0354-767b-42df-a9a4-4f05f1a751b4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projects
+    - node.type.home
+    - paragraphs.paragraphs_type.see_too
+  module:
+    - entity_reference_revisions
+id: node.home.field_projects
+field_name: field_projects
+entity_type: node
+bundle: home
+label: 'Nos projet'
+description: 'Les projets structurés en paragraphe de type "voir aussi" sont remontés sur la page d''accueil au nombre de <strong>deux maximum</strong>.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      see_too: see_too
+    negate: 0
+    target_bundles_drag_drop:
+      cta:
+        weight: 5
+        enabled: false
+      media:
+        weight: 6
+        enabled: false
+      rich_text:
+        weight: 7
+        enabled: false
+      see_too:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

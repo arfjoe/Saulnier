@@ -1,0 +1,15 @@
+uuid: b2936e8d-0172-4e89-b06e-972af5e5c0e0
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_cta.png
+id: cta
+label: 'Call to action'
+icon_uuid: null
+icon_default: null
+description: 'Mise en avant avec bouton'
+behavior_plugins: {  }

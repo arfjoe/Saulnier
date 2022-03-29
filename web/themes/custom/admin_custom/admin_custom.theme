@@ -1,0 +1,11 @@
+<?php
+
+
+function admin_custom_preprocess_input(&$variables) {
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $field = $variables['element'];
+    if ($field['#type'] == 'textfield' && $field['#size'] == 300) {
+      $variables["attributes"]["size"] = '80';
+    }
+  }
+}

@@ -1,0 +1,33 @@
+uuid: be63df9e-bb92-4446-9402-5d3fa5a281e2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser_news_homepage
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.teaser_news_homepage
+  module:
+    - responsive_image
+_core:
+  default_config_hash: EP_ezL35cTO1NM5uCPjelHXGLBrIGEwILURP3w-m2FM
+id: media.image.teaser_news_homepage
+targetEntityType: media
+bundle: image
+mode: teaser_news_homepage
+content:
+  field_media_image:
+    type: responsive_image
+    label: visually_hidden
+    settings:
+      responsive_image_style: teaser_news_homepage
+      image_link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

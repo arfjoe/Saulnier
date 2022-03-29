@@ -1,0 +1,49 @@
+uuid: a1c3534b-2a0d-4453-b314-a7600d332ff0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.partners.field_link
+    - field.field.taxonomy_term.partners.field_logo
+    - responsive_image.styles.partner_logo
+    - taxonomy.vocabulary.partners
+  module:
+    - link
+    - responsive_image
+    - text
+id: taxonomy_term.partners.default
+targetEntityType: taxonomy_term
+bundle: partners
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_logo:
+    type: responsive_image
+    label: above
+    settings:
+      responsive_image_style: partner_logo
+      image_link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

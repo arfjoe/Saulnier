@@ -1,0 +1,76 @@
+uuid: 667465d9-8ffe-4e6d-ab5e-d55dec4e1d15
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: ckeditor/files
+    extensions: 'txt pdf doc docx odt ppt pptx csv xls xlsx'
+    max_size: ''
+_core:
+  default_config_hash: GpxvYjhGr00_uT2lPykyL-q-UMkZy10PX5ROoGX2U3M
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Underline
+            - '-'
+            - RemoveFormat
+        -
+          name: Linking
+          items:
+            - DrupalUnlink
+            - DrupalLink
+            - DrupalFile
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - DrupalMediaLibrary
+            - DrupalImage
+        -
+          name: Style
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - '-'
+            - Undo
+            - Redo
+            - Source
+  plugins:
+    stylescombo:
+      styles: "a-download-link|Lien de téléchargement\r\na-external-link|Lien externe\r\np.pink|Rose\r\np.clear|Clear\r\nul.square|Liste carré"
+    language:
+      language_list: un
+image_upload:
+  status: true
+  scheme: public
+  directory: ckeditor/images
+  max_size: ''
+  max_dimensions:
+    width: 1396
+    height: null

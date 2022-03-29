@@ -1,0 +1,21 @@
+uuid: 7085d58c-7330-450b-9b97-34b5d83f7064
+langcode: fr
+status: true
+dependencies:
+  module:
+    - path
+    - user
+_core:
+  default_config_hash: 9QpZ-u1AHZHDovtqh6GT8s9fqo4tr4_Z-TFBzWnJcPU
+id: user.user.path
+field_name: path
+entity_type: user
+bundle: user
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

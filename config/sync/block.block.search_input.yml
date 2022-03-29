@@ -1,0 +1,23 @@
+uuid: 78044f10-4174-4799-b889-de16ca7bb05f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.global_search
+  module:
+    - views
+  theme:
+    - cp22_saulnier_theme
+id: search_input
+theme: cp22_saulnier_theme
+region: header
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:global_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:global_search-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility: {  }

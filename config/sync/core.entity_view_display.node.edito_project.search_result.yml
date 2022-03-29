@@ -1,0 +1,45 @@
+uuid: 2166096d-6d6a-44b7-aa54-b84478a802f8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.edito_project.field_chapo
+    - field.field.node.edito_project.field_paragraphs
+    - field.field.node.edito_project.field_partners
+    - field.field.node.edito_project.field_theme
+    - field.field.node.edito_project.field_visual
+    - node.type.edito_project
+  module:
+    - user
+id: node.edito_project.search_result
+targetEntityType: node
+bundle: edito_project
+mode: search_result
+content:
+  field_chapo:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_paragraphs: true
+  field_partners: true
+  field_visual: true
+  langcode: true
+  links: true

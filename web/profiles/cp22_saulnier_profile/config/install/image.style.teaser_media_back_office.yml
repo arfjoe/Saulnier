@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: teaser_media_back_office
+label: 'Teaser media Back-office (400w)'
+effects:
+  d426547d-8e46-46b3-aac0-6f70e17e38df:
+    uuid: d426547d-8e46-46b3-aac0-6f70e17e38df
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: null
+      upscale: false

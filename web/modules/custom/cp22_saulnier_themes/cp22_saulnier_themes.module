@@ -1,0 +1,62 @@
+<?php
+
+use Drupal\cp22_saulnier_news\Manager\NewsManager;
+use Drupal\cp22_saulnier_themes\Manager\ThemeTaxonomyManager;
+use Drupal\node\NodeInterface;
+//use Drupal\cp22_saulnier_news\Plugin\QueueWorker;
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function cp22_saulnier_themes_preprocess_node(&$variables) {
+
+  /** @var \Drupal\node\Entity\Node $node */
+
+  //On check seulement les nodes
+  $node = $variables['node'];
+  $Manager = Drupal::service(ThemeTaxonomyManager::class);
+  if ($node->bundle() == NewsManager::NEWS_LIST_BUNDLE){
+
+      //Création du formulaire
+      $form = Drupal::formBuilder()->getForm('Drupal\cp22_saulnier_themes\Form\NewsListForm');
+      $variables['form'] = $form;
+
+     $variables['pager'] = ['#type'=>'pager'];
+  }
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function cp22_saulnier_themes_preprocess_taxonomy_term(&$variables, $hook) {
+
+  $terms = $variables['term'];
+  $termsId = $terms->id();
+  $view_mode = $variables['view_mode'];
+
+  if ($terms->bundle() == 'theme' && $view_mode == 'full') {
+
+    $newsManager = Drupal::service(NewsManager::class);
+    $newsByTheme = $newsManager->getBuiltNewsNodeForNewsListPageByThemeId($termsId);
+    $variables['newsByThemeNodes'] = $newsByTheme;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cp22_saulnier_themes_theme($existing, $type, $theme, $path): array {
+  return [
+    'themesList' => [
+      'render element' => 'children',
+      'variables' => [
+        'items' =>[],
+      ],
+    ],
+  ];
+}
+
+
+
+
+
+

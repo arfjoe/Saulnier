@@ -1,0 +1,15 @@
+uuid: fad84170-b20e-44ca-a225-a570a2604b03
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_see_too.png
+id: see_too
+label: 'Voir aussi'
+icon_uuid: null
+icon_default: null
+description: 'Bloc pour remonter jusqu''à 4 pages projet editorial'
+behavior_plugins: {  }

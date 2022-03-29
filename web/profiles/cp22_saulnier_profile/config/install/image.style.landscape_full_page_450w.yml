@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: landscape_full_page_450w
+label: 'Paysage full page (450w)'
+effects:
+  589670ea-c7b9-4982-b438-9de07a7ee338:
+    uuid: 589670ea-c7b9-4982-b438-9de07a7ee338
+    id: image_scale
+    weight: 1
+    data:
+      width: 450
+      height: null
+      upscale: false

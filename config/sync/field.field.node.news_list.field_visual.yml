@@ -1,0 +1,29 @@
+uuid: 1d3f3206-106a-46ce-b057-9efee974adb3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visual
+    - media.type.image
+    - node.type.news_list
+id: node.news_list.field_visual
+field_name: field_visual
+entity_type: node
+bundle: news_list
+label: Visuel
+description: 'Taille d''image conseillée : 1920x375'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: 75MVbZkr_hgA8Osoiaxy1nX289VtODZXHa394Qr-ew8
+langcode: fr
+admin_path: 0
+admin_path_value: back-office
+user_path: 1
+user_path_value: account

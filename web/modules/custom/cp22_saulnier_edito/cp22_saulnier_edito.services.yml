@@ -1,0 +1,9 @@
+services:
+  Drupal\cp22_saulnier_edito\Gateway\EditoGateway:
+    class: Drupal\cp22_saulnier_edito\Gateway\EditoGateway
+    arguments: ['@entity_type.manager','@adimeo_tools.language']
+
+  Drupal\cp22_saulnier_edito\Manager\EditoManager:
+    class: Drupal\cp22_saulnier_edito\Manager\EditoManager
+    arguments: [ '@Drupal\cp22_saulnier_edito\Gateway\EditoGateway','@entity_type.manager', '@cache.data']
+

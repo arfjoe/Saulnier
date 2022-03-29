@@ -1,0 +1,57 @@
+##
+# Main library
+##
+main:
+  css:
+    theme:
+      assets/build/css/screen.css: {}
+      assets/build/css/print.css: {media: print}
+  js:
+    assets/build/js/main.js: {weight: -1, minified: true}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - cp22_saulnier_theme/swiper
+
+
+swiper:
+  css:
+    theme:
+      https://unpkg.com/swiper@8/swiper-bundle.min.css: { type: external, minified: true, weight: -100 }
+  js:
+    https://unpkg.com/swiper@8/swiper-bundle.min.js: { type: external, minified: true, weight: -100 }
+
+
+##
+# Popin
+##
+popins:
+  js:
+    assets/build/js/popin.js: {}
+  dependencies:
+    - core/jquery
+
+##
+# Paragraph Media (Video)
+##
+video:
+  js:
+    assets/build/js/video.js: {}
+  dependencies:
+    - core/jquery
+
+##
+# Formulaire
+##
+form:
+  js:
+    assets/build/js/form.js: {}
+  dependencies:
+    - core/jquery
+
+test-component:
+  css:
+    theme:
+      assets/build/js/reactComponents/testComponent/testComponent.css: { }
+  js:
+    assets/build/js/reactComponents/testComponent/testComponent.js: { minified: true }

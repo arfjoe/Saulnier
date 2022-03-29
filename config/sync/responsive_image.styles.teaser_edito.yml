@@ -1,0 +1,59 @@
+uuid: 76a05c13-87d8-4f47-8361-afd71ce3f3f7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teaser_edito
+    - image.style.teaser_edito_x2
+  theme:
+    - cp22_saulnier_theme
+id: teaser_edito
+label: 'Teaser Edito'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito_x2
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito_x2
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito_x2
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito_x2
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_edito
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 2x
+breakpoint_group: cp22_saulnier_theme
+fallback_image_style: teaser_edito

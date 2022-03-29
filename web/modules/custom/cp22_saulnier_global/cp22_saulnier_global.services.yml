@@ -1,0 +1,12 @@
+services:
+  #Breadcrumb
+  cp22_saulnier_global.custom_breadcrumb:
+    class: Drupal\cp22_saulnier_global\Service\BaseBreadcrumb
+    tags:
+      - { name: breadcrumb_builder, priority: 1010 }
+    arguments: ['@router.admin_context', '@title_resolver']
+
+  #Basic Taxonomy Gateway (to get all terms of a taxonomy ordered by weight)
+  cp22_saulnier_global.basic_taxonomy_gateway:
+    class: Drupal\cp22_saulnier_global\Gateway\BasicListOfTaxonomyTermsGateway
+    arguments: [ '@entity_type.manager' ]

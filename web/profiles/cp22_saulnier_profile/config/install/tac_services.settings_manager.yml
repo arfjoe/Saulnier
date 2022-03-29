@@ -1,0 +1,18 @@
+data:
+  privacy_url: ''
+  scrolling_behavior: 0
+  custom_disclaimer: ''
+  high_privacy: 1
+  allowed_button: 1
+  accept_all_cta: 1
+  deny_all_cta: 1
+  orientation: middle
+  show_icon: 1
+  icon_position: BottomRight
+  icon_source: ''
+  adblocker: 0
+  show_alert_small: 0
+  cookie_list: 0
+  handle_dnt_request: 0
+  mandatory: 1
+  cookies_duration: '365'

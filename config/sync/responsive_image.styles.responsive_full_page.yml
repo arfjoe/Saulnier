@@ -1,0 +1,41 @@
+uuid: 74bac173-c36a-4f66-bd11-2f8f6a5f61f8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.landscape_full_page_1280w
+    - image.style.landscape_full_page_1366w
+    - image.style.landscape_full_page_1440w
+    - image.style.landscape_full_page_1920w
+    - image.style.landscape_full_page_2560w
+    - image.style.landscape_full_page_2732w
+    - image.style.landscape_full_page_2880w
+    - image.style.landscape_full_page_450w
+    - image.style.landscape_full_page_5116w
+    - image.style.landscape_full_page_900w
+  theme:
+    - cp22_saulnier_theme
+_core:
+  default_config_hash: 3MuLt5CQDM1tIDFErg40kGafsR7tP2GltLDr6kPQ1ts
+id: responsive_full_page
+label: 'Responsive full page'
+image_style_mappings:
+  -
+    breakpoint_id: cp22_saulnier_theme.all
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - landscape_full_page_1280w
+        - landscape_full_page_1366w
+        - landscape_full_page_1440w
+        - landscape_full_page_1920w
+        - landscape_full_page_2560w
+        - landscape_full_page_2732w
+        - landscape_full_page_2880w
+        - landscape_full_page_450w
+        - landscape_full_page_5116w
+        - landscape_full_page_900w
+breakpoint_group: cp22_saulnier_theme
+fallback_image_style: landscape_full_page_1920w

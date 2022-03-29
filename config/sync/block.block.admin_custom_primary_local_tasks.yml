@@ -1,0 +1,22 @@
+uuid: a5df88f7-0257-4dbd-8b22-5ea37c1b6501
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - admin_custom
+_core:
+  default_config_hash: jaY9lbOHV7NsJJhpXd10dFSHY13auhKKgGQZTbqX_DE
+id: admin_custom_primary_local_tasks
+theme: admin_custom
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

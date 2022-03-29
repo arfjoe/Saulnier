@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: yGFWRdXvLQUScPsJvQZKWBZeazYg_J6eHSlLJdrXsNg
+langcode: fr
+uuid: 7129134b-542b-4b24-a848-8b9366e7b2af
+name: 'Saulnier - Projet fil rouge Coding Pool 2022'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /front
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: fr

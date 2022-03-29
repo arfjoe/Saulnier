@@ -1,0 +1,53 @@
+// RESPONSIVE
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+@mixin newsListWidth {
+  @media (max-width: #{$newsList-width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+@mixin screenMaxWidth($width){
+  @media screen and (max-width: #{$width}) {
+    @content;
+  }
+}
+@mixin more-than($width) {
+  @media screen and (min-width: #{$width}) {
+    @content;
+  }
+}
+
+// RETINA
+@mixin retina {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (                min-resolution: 120dpi) {
+    @content;
+  }
+}
+
+// ADD BORDER : default value with overiding possibilities.
+@mixin add-border(
+  $border-position: all,
+  $border-size: 1px,
+  $border-pattern: solid,
+  $border-color: $color-black) {
+
+  @if $border-position == all {
+    border: $border-size $border-pattern $border-color;
+  }
+  @else {
+    border-#{$border-position}: $border-size
+    $border-pattern $border-color;
+  }
+}
+
+// project specifics mixins :

@@ -1,0 +1,69 @@
+uuid: 41ed8ca2-ea9e-424d-b892-4b015a07a4ad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.edito_project.field_chapo
+    - field.field.node.edito_project.field_paragraphs
+    - field.field.node.edito_project.field_partners
+    - field.field.node.edito_project.field_theme
+    - field.field.node.edito_project.field_visual
+    - node.type.edito_project
+  module:
+    - entity_reference_revisions
+    - user
+id: node.edito_project.default
+targetEntityType: node
+bundle: edito_project
+mode: default
+content:
+  field_chapo:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_partners:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: colorized_cover
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

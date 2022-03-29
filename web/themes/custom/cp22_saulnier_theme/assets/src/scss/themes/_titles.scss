@@ -1,0 +1,15 @@
+.MainTitle {
+  text-align: center;
+  color: $color-black;
+  @extend %_fontMainTitle;
+}
+
+.SecondaryTitle {
+
+}
+
+.ckeditorContent h3,
+.ckeditorContent h2 {
+  text-align: left;
+  //...
+}

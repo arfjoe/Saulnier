@@ -1,0 +1,58 @@
+.ParagraphMedia {
+
+  margin: 14.5rem auto 0;
+  max-width: 70rem;
+
+  &-media {
+    .video{
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+
+      iframe {
+        @extend %_displayNone;
+        @extend %_absoluteCover;
+        z-index: 10;
+
+        &.js-open{
+          display: block;
+        }
+      }
+    }
+
+    picture {
+
+      display: block;
+      position: relative;
+
+      &:before {
+        content: "\f144";
+        @extend %_fontAwesomeBase;
+        display: inline-block;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        z-index: 100;
+        color: white;
+        font-size: 8rem;
+        @extend %_twoWayAlignAbsolute;
+      }
+
+      img {
+        display: block;
+        margin: 6rem auto;
+      }
+
+      &:after {
+        content: '';
+        @extend  %_absoluteCover;
+        background: rgba($color-textBlue, 0.6);
+        z-index: 10;
+      }
+
+      &.js-close{
+        @extend %_displayNone;
+      }
+    }
+  }
+}

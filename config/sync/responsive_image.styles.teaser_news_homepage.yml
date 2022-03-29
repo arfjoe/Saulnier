@@ -1,0 +1,23 @@
+uuid: c041973a-51b7-4467-88df-2b76bb025a2a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teaser_news_homepage
+    - image.style.teaser_news_homepage_x2
+  theme:
+    - cp22_saulnier_theme
+id: teaser_news_homepage
+label: 'Teaser News Homepage'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width:450px) 140px, 120px'
+      sizes_image_styles:
+        - teaser_news_homepage
+        - teaser_news_homepage_x2
+    breakpoint_id: cp22_saulnier_theme.all
+    multiplier: 1.5x
+breakpoint_group: cp22_saulnier_theme
+fallback_image_style: teaser_news_homepage

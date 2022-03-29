@@ -1,0 +1,51 @@
+  .NodeHeader-cover{
+
+    position: relative;
+    opacity: 1;
+    margin-bottom: 4rem;
+
+    &:before{
+      content: '';
+      width: 200rem;
+      left: calc(100% - 25rem);
+      right: 0;
+      background-color: $color-red;
+      display: block;
+      position: absolute;
+      z-index: 4;
+      top: -1.5rem;
+      height: 3rem;
+    }
+
+    &:after {
+      content: '';
+      @extend  %_absoluteCover;
+      background: rgba($color-textBlue, 0.8);
+    }
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 380px;
+    }
+    h1{
+      position: absolute;
+      top:50%;
+      text-transform: uppercase;
+      color: $color-white;
+      z-index:2;
+      text-align: center;
+      width: 100%;
+      transform: translateY(-50%);
+      font: normal normal bold 60px/72px Fira Sans;
+    }
+  }
+
+  .chapo{
+    text-align: left;
+    font: normal normal bold 26px/31px Fira Sans;
+    color: $color-chapo;
+    max-width: 1466px;
+    margin:6.3rem auto;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }

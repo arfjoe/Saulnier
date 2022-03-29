@@ -1,0 +1,23 @@
+uuid: 06184ca8-2b0a-45bc-8925-7d540a1855ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_link
+    - taxonomy.vocabulary.partners
+  module:
+    - link
+id: taxonomy_term.partners.field_link
+field_name: field_link
+entity_type: taxonomy_term
+bundle: partners
+label: Lien
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

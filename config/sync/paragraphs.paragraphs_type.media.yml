@@ -1,0 +1,15 @@
+uuid: 6d4faa71-e848-4393-a4d9-0258751a4be4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraphs_media.png
+id: media
+label: Media
+icon_uuid: null
+icon_default: null
+description: 'Ajout d''un paragraphe média de type texte, image ou vidéos'
+behavior_plugins: {  }

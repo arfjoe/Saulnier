@@ -1,0 +1,20 @@
+uuid: 953960f1-9a92-4851-8ff8-881304f5c54d
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - admin_custom
+_core:
+  default_config_hash: bd88B-Jah1A9dVjXyL2mEU4WHjQtKejxvaKRdRGWUr4
+id: admin_custom_page_title
+theme: admin_custom
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

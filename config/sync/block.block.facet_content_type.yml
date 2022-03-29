@@ -1,0 +1,29 @@
+uuid: cd848ddd-d1d9-4e17-b2e0-3924d36bba02
+langcode: fr
+status: true
+dependencies:
+  config:
+    - facets.facet.content_type
+  module:
+    - facets
+    - system
+  theme:
+    - cp22_saulnier_theme
+id: facet_content_type
+theme: cp22_saulnier_theme
+region: content
+weight: -3
+provider: null
+plugin: 'facet_block:content_type'
+settings:
+  id: 'facet_block:content_type'
+  label: 'Type de contenu facet'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: facet_content_type
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/recherche\r\n/search"

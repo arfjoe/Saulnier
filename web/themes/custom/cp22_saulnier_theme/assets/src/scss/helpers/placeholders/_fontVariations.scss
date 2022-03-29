@@ -1,0 +1,32 @@
+// FONT VARIATIONS
+%_fontBody {
+  font-family: $font-body;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//%_fontBodyItalic {
+//  font-family: $font-body;
+//  font-weight: 400;
+//  font-style: italic;
+//}
+
+%_fontBodyBold {
+  font-family: $font-body;
+  font-weight: 700;
+  font-style: normal;
+}
+
+%_fontMainTitle {
+  font-family: $font-title;
+  font-weight: 700;
+  font-style: normal;
+}
+
+%_fontAwesomeBase {
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-awesome;
+}

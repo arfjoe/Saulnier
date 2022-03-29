@@ -1,0 +1,10 @@
+uuid: 95a379a0-b7b7-4b3d-9983-4a3af912763c
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YhvIj4Ln69c6rG4oeaMwo8qBZ6fY0z2L2yLd1xT2N7A
+id: contrib
+label: Contribuer
+description: 'Menu de contribution du Back-office'
+locked: true

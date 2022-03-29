@@ -1,0 +1,72 @@
+name: Saulnier - Projet fil rouge Coding Pool 2022 - profile d'installation
+type: profile
+version: 1.0
+core_version_requirement: '^9'
+dependencies:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - block
+  - block_content
+  - ckeditor
+  - config
+  - content_translation
+  - config_filter
+  - config_translation
+  - content_lock
+  - datetime
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - editor_file
+  - editor_advanced_link
+  - entity_embed
+  - entity_reference_revisions
+  - field
+  - field_group
+  - field_ui
+  - file
+  - filter
+  - form_options_attributes
+  - image
+  - language
+  - link
+  - locale
+  - media
+  - media_library
+  - menu_link_attributes
+  - menu_link_content
+  - menu_ui
+  - metatag
+  - node
+  - options
+  - page_cache
+  - paragraphs
+  - paragraphs_browser
+  - path
+  - pathauto
+  - redirect
+  - rabbit_hole
+  - rename_admin_paths
+  - responsive_image
+  - rh_node
+  - rh_taxonomy
+  - simple_sitemap
+  - system
+  - taxonomy
+  - text
+  - token
+  - toolbar
+  - twig_tweak
+  - update
+  - user
+  - views
+  - views_ui
+  - adimeo_tools
+  - bo_additions
+  - tac_services
+  - cp22_saulnier_global
+  - cp22_saulnier_home
+themes:
+  - claro
+  - admin_custom
+  - cp22_saulnier_theme

@@ -1,0 +1,7 @@
+cp22_saulnier_themes:
+  path: '/themes'
+  defaults:
+    _controller: '\Drupal\cp22_saulnier_themes\Controller\ThemeController::getThemeContent'
+    _title: 'Liste des Thématiques'
+  requirements:
+    _permission: 'access content'

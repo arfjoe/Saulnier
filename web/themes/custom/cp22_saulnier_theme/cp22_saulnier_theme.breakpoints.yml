@@ -1,0 +1,33 @@
+cp22_saulnier_theme.mobile:
+  label: mobile (max 450px)
+  mediaQuery: 'all and (min-width: 0) and (max-width: 450px)'
+  weight: 0
+  multipliers:
+    - 1.5x
+    - 2x
+
+cp22_saulnier_theme.tablet:
+  label: tablet (max 1024px)
+  mediaQuery: 'all and (min-width: 451px) and (max-width: 1024px)'
+  weight: 1
+  multipliers:
+    - 1.5x
+    - 2x
+
+cp22_saulnier_theme.desktop:
+  label: desktop (min 1025px)
+  mediaQuery: 'all and (min-width: 1025px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 1.5x
+    - 2x
+
+cp22_saulnier_theme.all:
+  label: all sizes (for srcset)
+  mediaQuery: 'all and (min-width: 0px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 1.5x
+    - 2x

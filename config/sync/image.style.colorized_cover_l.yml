@@ -1,0 +1,15 @@
+uuid: b91622a9-1da6-46b4-9267-fccdd1868f4a
+langcode: fr
+status: true
+dependencies: {  }
+name: colorized_cover_l
+label: 'Cover Colorisée L (1024w)'
+effects:
+  e37f8e74-e2a9-452e-b39a-8f7f2e2c74e0:
+    uuid: e37f8e74-e2a9-452e-b39a-8f7f2e2c74e0
+    id: image_scale
+    weight: 1
+    data:
+      width: 1024
+      height: null
+      upscale: true

@@ -1,0 +1,22 @@
+uuid: c641ee83-faa4-4c50-858c-8d9b91b3716d
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - admin_custom
+_core:
+  default_config_hash: e7EcwJHg2GPkt9j7N-0jFMW1tsADQhHo-6ZGjwaTE2s
+id: admin_custom_secondary_local_tasks
+theme: admin_custom
+region: pre_content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

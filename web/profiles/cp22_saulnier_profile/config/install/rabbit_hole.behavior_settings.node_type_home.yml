@@ -1,0 +1,10 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.home
+id: node_type_home
+action: page_redirect
+allow_override: 0
+redirect: /
+redirect_code: 301

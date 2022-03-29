@@ -1,0 +1,39 @@
+%_ckeditor {
+  h2{
+    margin-bottom: 2.5rem;
+  }
+
+  img{
+    float: left;
+    margin-right: 4rem;
+    width: 678px;
+    height: 440px;
+  }
+
+  p{
+    color: $color-chapo;
+    font: normal normal normal 22px/28px Fira Sans;
+  }
+
+  ul{
+    li{
+    color: #1D2434;
+    font: normal normal normal 22px/34px Fira Sans;
+      padding-left: 2.8rem;
+      position: relative;
+      margin-bottom: 2rem;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background-color: $color-blueSky;
+      top: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+uuid: da4b4d5f-08f8-4acc-b70c-184bac7a8e34
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.paragraph_media_videos
+    - image.style.paragraph_media_videos_mobil
+    - image.style.paragraph_media_videos_x2
+  theme:
+    - cp22_saulnier_theme
+id: paragraph_media_videos
+label: 'Paragraphe Média Vidéos'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos_x2
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos_x2
+    breakpoint_id: cp22_saulnier_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos_x2
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos_x2
+    breakpoint_id: cp22_saulnier_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos_mobil
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos_mobil
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_videos_mobil
+    breakpoint_id: cp22_saulnier_theme.mobile
+    multiplier: 2x
+breakpoint_group: cp22_saulnier_theme
+fallback_image_style: paragraph_media_videos

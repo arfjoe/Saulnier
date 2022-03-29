@@ -1,0 +1,31 @@
+uuid: 8cba5ba3-c998-46e3-ac2a-48d096663197
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.eb_node_edito
+  module:
+    - views
+name: edito_project_bis
+label: 'Pages projets éditoriales bis'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Sélectionner les entités'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  74453abe-0c2b-4591-9667-f12afd12ecc8:
+    id: view
+    uuid: 74453abe-0c2b-4591-9667-f12afd12ecc8
+    label: Vue
+    weight: 1
+    settings:
+      submit_text: 'Sélectionner les entités'
+      auto_select: false
+      view: eb_node_edito
+      view_display: entity_browser_1

@@ -1,0 +1,10 @@
+uuid: bcdb1fdb-877b-4da8-8aea-08ef39d31eb5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.colorized_cover
+label: 'Cover Colorisée'
+targetEntityType: media
+cache: true

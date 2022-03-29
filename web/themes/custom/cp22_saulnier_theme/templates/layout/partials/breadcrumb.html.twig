@@ -1,0 +1,19 @@
+{# @TODO add rich snippet breadcrumb #}
+
+{% if breadcrumb %}
+    <div id="Breadcrumb">
+        <nav>
+            <ul>
+                {% for item in breadcrumb %}
+                    <li>
+                        {% if item.url %}
+                            <a href="{{ item.url }}">{{ item.text }}</a>
+                        {% else %}
+                            {{ item.text }}
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+{% endif %}

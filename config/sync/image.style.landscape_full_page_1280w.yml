@@ -1,0 +1,17 @@
+uuid: 8e447a00-26ec-4a6c-9d18-d26605059d3a
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pXiafd0_VLyCWCjQv6Q8FnawL7bR6YsAhKzFY6Gfg2I
+name: landscape_full_page_1280w
+label: 'Paysage full page (1280w)'
+effects:
+  589670ea-c7b9-4982-b438-9de07a7ee338:
+    uuid: 589670ea-c7b9-4982-b438-9de07a7ee338
+    id: image_scale
+    weight: 1
+    data:
+      width: 1280
+      height: null
+      upscale: false

@@ -1,0 +1,4 @@
+name: 'Content type'
+widget:
+  config:
+    reset_text: 'All display'

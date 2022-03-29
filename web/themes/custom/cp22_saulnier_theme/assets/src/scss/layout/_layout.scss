@@ -1,0 +1,33 @@
+@import "main/breadcrumb";
+@import "footer";
+@import "header/header";
+@import "main/page-content";
+
+#Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  //overflow-x: hidden;
+
+  & > * {
+    min-height: 0.1rem;
+  }
+
+  & > #MainWrapper {
+    flex-grow: 1;
+  }
+}
+
+//when admin toolbar is open
+body.adminimal-admin-toolbar {
+  #Page {
+    min-height: calc(100vh - 39px);
+  }
+
+  &.toolbar-tray-open {
+    #Page {
+      min-height: calc(100vh - 80px);
+    }
+  }
+}

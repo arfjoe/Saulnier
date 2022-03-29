@@ -1,0 +1,15 @@
+uuid: 570b7617-9db1-4de5-a2ad-d9e484c332c2
+langcode: fr
+status: true
+dependencies: {  }
+name: paragraph_media
+label: 'Paragraphe Média (1115w)'
+effects:
+  ab1031aa-a3ad-4219-a256-56615cfcde8f:
+    uuid: ab1031aa-a3ad-4219-a256-56615cfcde8f
+    id: image_scale
+    weight: 1
+    data:
+      width: 1115
+      height: null
+      upscale: false

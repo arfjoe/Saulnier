@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function cp22_saulnier_partners_theme($existing, $type, $theme, $path): array {
+  return [
+    'partners_slider' => [
+      'variables' => ['partners' => NULL],
+    ],
+    'partnersList' => [
+      'render element' => 'children',
+      'variables' => [
+        'items' =>[],
+      ],
+    ],
+  ];
+}
+
+
+
+
+
+
+
+
+

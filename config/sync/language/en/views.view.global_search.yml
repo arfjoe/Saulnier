@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      title: 'Global search'
+      exposed_form:
+        options:
+          submit_button: Search

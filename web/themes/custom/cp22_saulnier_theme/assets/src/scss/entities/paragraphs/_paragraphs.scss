@@ -1,0 +1,21 @@
+@import "wysiwyg";
+@import "seeToo";
+@import "media";
+
+.paragraphRichText:nth-child(4){
+  background: rgba(145, 188, 255, 0.36) 0 0 no-repeat padding-box;
+  box-shadow: 0 3px 16px #0000000D;
+  border: 0.5px solid rgba(145, 188, 255, 0.36);
+  margin-top: 11.6rem;
+  padding: 4rem;
+
+  .CkEditorContent{
+    display: flex;
+    justify-content: space-around;
+    margin: 6rem auto 4rem auto;
+    p{
+      color:$color-blueSky;
+    }
+  }
+}
+

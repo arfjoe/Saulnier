@@ -1,0 +1,30 @@
+/* ------- NO COOKIE PLACEHOLDER ------- */
+.TacNoCookieMessage{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $color-black;
+  color: $color-white;
+  opacity: 0.9;
+  z-index: 9;
+  text-align: center;
+  font-size: 1.8rem;
+  display: none;
+
+  &-innerWrapper{
+    @extend %_twoWayAlignAbsolute;
+
+    span{
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    .js-tac-panel-opener{
+      //color: $color-yellow; COLOR TO REPLACE
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

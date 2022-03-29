@@ -1,0 +1,15 @@
+uuid: 15d93566-36dc-4425-a6da-fb97ddf2cb9a
+langcode: fr
+status: true
+dependencies: {  }
+name: paragraph_media_mobil
+label: 'Paragraphe Média (700w)'
+effects:
+  af330875-4f07-4efd-8478-bd48ddc1c8d0:
+    uuid: af330875-4f07-4efd-8478-bd48ddc1c8d0
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: null
+      upscale: false

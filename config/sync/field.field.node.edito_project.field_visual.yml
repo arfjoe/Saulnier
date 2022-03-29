@@ -1,0 +1,29 @@
+uuid: b9d5fcf4-e675-4e70-8ab1-5f9d4d253e4b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visual
+    - media.type.image
+    - node.type.edito_project
+id: node.edito_project.field_visual
+field_name: field_visual
+entity_type: node
+bundle: edito_project
+label: Visuel
+description: 'Taille d''image conseillée : 1920x375'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

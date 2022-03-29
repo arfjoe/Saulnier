@@ -1,0 +1,12 @@
+uuid: cfef3e47-7e15-47dc-a963-d479cee46128
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: ImahdJMVS88o5E8z5XcMq9jv236HzJ-e1gp-e0m_pH8
+id: media.teaser_bo
+label: 'Teaser BO'
+targetEntityType: media
+cache: true
